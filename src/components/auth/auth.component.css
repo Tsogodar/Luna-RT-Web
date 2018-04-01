@@ -1,0 +1,27 @@
+.loginForm{
+    width: 15%;
+    margin: 5% auto;
+    text-align: center;
+}
+
+.mat-input-underline{
+    color: orange;
+    background-color: orange;
+}
+
+.loginButton{
+    width: 55%;
+    font-size: 13pt;
+    color: #0089b5;
+    border: 2px solid orange;
+    background-color: white;
+}
+
+.loginButton:hover{
+    color: white;
+    background-color: orange;
+}
+
+.message{
+    margin-bottom: 2%;
+}

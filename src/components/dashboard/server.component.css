@@ -1,0 +1,20 @@
+.dashboardContent{
+    margin-left: 11%;
+}
+
+.memInfo,.osInfo, .cpuInfo{
+    margin-left: 2%;
+}
+
+.serverInfo, .serverControls{
+    display: inline-block;
+}
+
+.serverInfo{
+    width: 40%;
+}
+
+.serverControls{
+    position: absolute;
+    margin-left: 15%;
+}

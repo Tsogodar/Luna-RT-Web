@@ -1,0 +1,16 @@
+<div class="loginForm">
+    <div class="message"><h4>{{message}}</h4></div>
+    <div class="message"><h4>{{loginResponse}}</h4></div>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Login" [(ngModel)]="loginInput" name="loginInput" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input type="password" matInput placeholder="Hasło" [(ngModel)]="passwordInput" name="passwordInput"
+                   required>
+        </mat-form-field>
+        <br>
+        <button class="loginButton" mat-raised-button type="submit" (click)="login()">Zaloguj</button>
+    </form>
+</div>

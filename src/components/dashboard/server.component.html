@@ -1,0 +1,35 @@
+<script src="../../../../Luna CLI/Server/app.js"></script>
+<app-sidebar></app-sidebar>
+<div class="dashboardContent">
+    <div class="serverInfo">
+        <h1>Informacje o serwerze</h1>
+        <br>
+        <div *ngIf="responseServerInfo!=null">
+            <h4>Czas pracy w sekundach: {{responseServerInfo.info.uptime}}</h4>
+            <p>System operacyjny:</p>
+            <div class="osInfo">
+                <p>Architektura: {{responseServerInfo.info.architecture}}</p>
+                <p>Platforma: {{responseServerInfo.info.platform}}</p>
+            </div>
+            <p>CPU:</p>
+            <div class="cpuInfo">
+                <p>Model: {{responseServerInfo.info.cpu[0].model}}</p>
+                <p>Prędkość: {{responseServerInfo.info.cpu[0].speed}} Mhz</p>
+                <p>Liczba wątków logicznych: {{responseServerInfo.info.cpuLogicalCores}}</p>
+            </div>
+            <p>Pamięć operacyjna</p>
+            <div class="memInfo">
+                <p>Całkowita pamięć: {{responseServerInfo.info.totalMem}} bajtów</p>
+                <p>Wolna pamięć: {{responseServerInfo.info.freeMem}} bajtów</p>
+            </div>
+        </div>
+        <div *ngIf="responseServerInfo==null">
+            <p>Pobieranie danych...</p>
+        </div>
+    </div>
+    <div class="serverControls">
+        <h1>Akcje serwera</h1>
+        <button mat-raised-button color="primary" (click)="restartServer()">Zrestartuj</button>
+        <button mat-raised-button color="primary" (click)="shutdownServer()">Wyłącz</button>
+    </div>
+</div>

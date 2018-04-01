@@ -1,0 +1,58 @@
+.logoutButton{
+    color: darkorange;
+    border: 2px solid orange;
+    background-color: transparent;
+}
+
+.logoutButton:hover{
+    color: white;
+    background-color: orange;
+}
+
+.logoutButton:focus{
+    box-shadow: none;
+    border: 2px solid orange;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+.sidebar-brand{
+    margin: 5px 0;
+    padding: 10px 0;
+    font-size: 14pt;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.sidebar-wrapper{
+    background-color: #424242;
+    display: block;
+    position: absolute;
+    width: 10%;
+    color: white;
+    height: 100%;
+}
+
+.sidebar-wrapper ul li{
+    list-style: none;
+    padding: 5px 0;
+}
+
+.sidebar-wrapper ul li a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.sidebar-wrapper ul li a:hover{
+    color: orangered;
+}
+
+.sidebar-nav{
+    padding: 0;
+}

@@ -1,0 +1,36 @@
+<script src="../../../../Luna CLI/Server/app.js"></script>
+<app-sidebar></app-sidebar>
+<div class="dashboardContent">
+    <div class="usersInfo">
+        <h1>Informacje o użytkownikach</h1>
+        <br>
+        <div *ngIf="responseUsersInfo!=null">
+            <p>Połączenia:</p>
+            <div class="osInfo">
+                <p>Łącznie połączeń: {{responseUsersInfo.info.allConnections}}</p>
+                <p>Połączeni użytkownicy: {{responseUsersInfo.info.usersCount}}</p>
+            </div>
+            <p>Użytkownicy:</p>
+            <table border="1px solid black">
+                <tr>
+                    <th>Lp</th>
+                    <th>Id</th>
+                    <th>Adres</th>
+                    <th>Akcje</th>
+                </tr>
+                <tr *ngFor="let user of responseUsersInfo.info.usersDetails; let i=index">
+                    <td *ngIf="i!=0">{{i}}</td>
+                    <td *ngIf="i!=0">{{user.id}}</td>
+                    <td *ngIf="i!=0">{{user.address}}</td>
+                    <td *ngIf="i!=0">
+                        <button mat-raised-button color="primary" (click)="disconnectUser(user.id)">Odłącz</button>
+                        <button mat-raised-button color="primary">PW</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div *ngIf="responseUsersInfo==null">
+            <p>Pobieranie danych...</p>
+        </div>
+    </div>
+</div>

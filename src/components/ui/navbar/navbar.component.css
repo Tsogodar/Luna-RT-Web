@@ -1,0 +1,10 @@
+.mat-toolbar{
+    background-color: #0089b5;
+}
+
+.brand{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    font-size: 20pt;
+}

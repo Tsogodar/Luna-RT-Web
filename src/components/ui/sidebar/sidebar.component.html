@@ -1,0 +1,27 @@
+<div class="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <h4>Witaj {{admin}}</h4>
+        </li>
+        <li>
+            <a routerLink="/dashboard/server">Serwer</a>
+        </li>
+        <li>
+            <a routerLink="/dashboard/users">Użytkownicy</a>
+        </li>
+        <li>
+            <a href="#">FTP</a>
+        </li>
+        <li>
+            <a href="#">Konto</a>
+        </li>
+        <li>
+            <a href="#">O aplikacji</a>
+        </li>
+        <li>
+            <a>
+                <button mat-raised-button="" class="btn logoutButton" (click)="logout()">Wyloguj</button>
+            </a>
+        </li>
+    </ul>
+</div>
