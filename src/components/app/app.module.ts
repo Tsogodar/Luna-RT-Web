@@ -8,7 +8,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatButtonModule, MatTableModule} from "@angular/material";
+import {MatButtonModule, MatDialogModule, MatTableModule} from "@angular/material";
 
 //UI components
 import {NavbarComponent} from "../ui/navbar/navbar.component";
@@ -17,6 +17,7 @@ import {SidebarComponent} from "../ui/sidebar/sidebar.component";
 import {AppComponent} from './app.component';
 import {AuthComponent} from "../auth/auth.component";
 import {ServerComponent} from "../dashboard/server.component";
+import {MessageComponent} from "../dashboard/Message/message.component";
 
 //Services
 import {SocketIOService} from "../../services/socketIO.service";
@@ -37,8 +38,11 @@ const appRoutes: Routes = [
         ServerComponent,
         UsersComponent,
         NavbarComponent,
-        SidebarComponent
+        SidebarComponent,
+        MessageComponent
     ],
+    entryComponents:[MessageComponent],
+
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
@@ -48,6 +52,7 @@ const appRoutes: Routes = [
         MatButtonModule,
         FormsModule,
         MatTableModule,
+        MatDialogModule,
         RouterModule.forRoot(appRoutes)
     ],
     providers: [

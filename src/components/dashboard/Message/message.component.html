@@ -1,0 +1,6 @@
+<mat-form-field>
+    <input matInput placeholder="Wiadomość" [(ngModel)]="message" name="message">
+</mat-form-field>
+<p>{{delivery}}</p>
+<br>
+<button mat-raised-button color="primary" (click)="send()">Wyslij</button>

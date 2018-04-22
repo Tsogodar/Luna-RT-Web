@@ -11,6 +11,7 @@ export class SocketIOService implements OnInit {
     serverInfoResponse=null;
     usersInfoResponse=null;
     loginResponse=null;
+    messageDeliveryResponse=null;
 
     constructor(private router: Router) {
     }
@@ -66,11 +67,16 @@ export class SocketIOService implements OnInit {
         })
     }
 
-    disconnectUser(id){
-        this.conn.emit('userDisconnect',id);
-        this.conn.on('userDisconnectStatus', (info) => {
-            console.log(info);
-        })
+    disconnectUserForce(id:string){
+        this.conn.emit('userForceDisconnect',id);
+    }
+
+    sendMessage(id:string,message:string){
+        this.conn.emit('message',id,message)
+        this.conn.emit('messageDelivered');
+        this.conn.on('messageDeliveredStatus', (info) => {
+            this.messageDeliveryResponse=info.info;
+        });
     }
 
 }

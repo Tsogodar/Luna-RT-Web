@@ -14,7 +14,7 @@
             <table border="1px solid black">
                 <tr>
                     <th>Lp</th>
-                    <th>Id</th>
+                    <th>ID</th>
                     <th>Adres</th>
                     <th>Akcje</th>
                 </tr>
@@ -23,8 +23,8 @@
                     <td *ngIf="i!=0">{{user.id}}</td>
                     <td *ngIf="i!=0">{{user.address}}</td>
                     <td *ngIf="i!=0">
-                        <button mat-raised-button color="primary" (click)="disconnectUser(user.id)">Odłącz</button>
-                        <button mat-raised-button color="primary">PW</button>
+                        <button mat-raised-button color="primary" (click)="disconnectUserForce(user.id)">Odłącz</button>
+                        <button mat-raised-button color="primary" (click)="sendPW(user.id)">Wiadomość</button>
                     </td>
                 </tr>
             </table>
